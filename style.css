@@ -12,26 +12,32 @@ body {
     "Open Sans",
     "Helvetica Neue",
     sans-serif;
-  color: rgb(238, 239, 240);
+  color: white;
   margin: 0px;
   padding-top: 0px;
   text-align: center;
-  background: rgb(89, 106, 158);
+  background: #596a9e;
 }
 .why {
   margin-top: 30px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding: 20px;
 }
 .infoboxes {
   width: 300px;
   height: 400px;
   padding-top: 20px;
-  margin-left: 30px;
   border-radius: 20px;
-  border: solid 2px black;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+  transition-duration: 0.3s;
+}
+.infoboxes:hover {
+  transform: scale(1.05);
+  transition-duration: 0.3s;
 }
 .officers {
   display: flex;
@@ -41,7 +47,8 @@ body {
   padding: 30px;
 }
 .officerbox {
-  background-color: rgba(14, 17, 26, 0.3);
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 15px;
   margin: 10px;
   padding: 15px;
@@ -58,11 +65,14 @@ body {
   align-items: center;
   height: 50px;
   padding-right: 20px;
-  background-color: rgba(14, 17, 26, 0.3);
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 p {
-  color: rgb(155, 161, 173);
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 a {
@@ -83,12 +93,20 @@ a {
     "Helvetica Neue",
     sans-serif;
   font-weight: bold;
-  width: 200px;
+  width: 250px;
   height: 100px;
   border: none;
   border-radius: 12px;
+  font-size: 20px;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  transition: 0.3s;
 }
 .signupbutton {
+  background-color: white;
+  color: rgb(69, 82, 122);
+  transition: 0.3s;
   font-family:
     system-ui,
     -apple-system,
@@ -102,8 +120,64 @@ a {
     "Helvetica Neue",
     sans-serif;
   font-weight: bold;
-  width: 200px;
+  font-size: 20px;
+  width: 250px;
   height: 100px;
   border: none;
   border-radius: 12px;
+}
+.signupbutton:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
+.resourcesbutton:hover {
+  background-color: white;
+  color: rgb(89, 106, 158);
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
+.maintitle {
+  font-size: 100px;
+  font-weight: 800;
+}
+
+.description {
+  font-size: 32px;
+}
+.desc {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  width: 800px;
+}
+.underpage {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+.titles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titles-left {
+  text-align: left;
+}
+
+.titles-right {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .maintitle {
+    font-size: 60px;
+  }
+  .desc {
+    width: 90%; /* Stops the text from hitting the edges of the screen */
+  }
 }
