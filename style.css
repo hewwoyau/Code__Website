@@ -26,14 +26,35 @@ body {
   flex-wrap: wrap;
 }
 .infoboxes {
-  width: 600px;
-  height: 400px;
-  padding-top: 20px;
+  width: 575px;
+  height: auto;
+  padding: 20px;
   border-radius: 20px;
   background-color: rgba(0, 0, 0, 0.2);
-
+  overflow-wrap: break-word;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   transition-duration: 0.3s;
   margin-bottom: 20px;
+}
+
+.infoboxes img {
+  width: 200px;
+  height: 200px;
+  border: none;
+  border-radius: 10px;
+}
+
+.descriptions h4 {
+  font-size: 30px;
+  margin-bottom: 2px;
+}
+.descriptions {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 .infoboxes:hover {
   transform: scale(1.02);
@@ -52,7 +73,7 @@ body {
   flex-direction: column;
 }
 
-.holder{
+.holder {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -118,7 +139,7 @@ p {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.individual-resource a{
+.individual-resource a {
   font-weight: 600;
   font-size: 24px;
   text-decoration: none;
@@ -127,33 +148,33 @@ p {
   padding-bottom: 3px;
 }
 
-.individual-resource a::after{
-  content:'';
+.individual-resource a::after {
+  content: "";
   position: absolute;
   padding-top: 2px;
-  height:2px;
-  left:0px;
-  bottom:0px;
-  width:0px;
+  height: 2px;
+  left: 0px;
+  bottom: 0px;
+  width: 0px;
   background-color: white;
   transition: width 0.3s;
   border-radius: 15px;
-  width:0%;
+  width: 0%;
   box-shadow: 2px;
 }
 
-.individual-resource a:hover::after{
-  width:105%;
+.individual-resource a:hover::after {
+  width: 105%;
 }
 
 a {
-  color:white;
+  color: white;
   text-decoration: none;
   margin-left: 25px;
   font-size: 20px;
 }
 
-.header a:hover{
+.header a:hover {
   color: rgb(237, 237, 237);
 }
 
